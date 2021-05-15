@@ -38,10 +38,10 @@ header {
     background: white;
     text-decoration: none;
   }
-  
+
   a:hover {
     background: grey;
-  } 
+  }
 }
 
 .spacer {
@@ -84,27 +84,29 @@ header {
 }
 
 form {
-  // margin-top: 60px;
-  // display: flex;
-  // flex-direction: column;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  // legend {
-  //   padding-left: 40px;
-  //   font-weight: bold;
-  //   text-align: left;
-  //   text-decoration: underline;
-  //   margin-bottom: 16px;
-  // }
+  legend {
+    padding-left: 40px;
+    font-weight: bold;
+    text-align: left;
+    text-decoration: underline;
+    margin-bottom: 16px;
+  }
 
-  // label {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   padding: 4px 36px 4px 40px;
-  // }
+  label {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 36px 4px 40px;
+  }
 
-  // input {
-  //   width: 100px;
-  // }
+  input {
+    width: 100px;
+    background-color: white;
+  }
 }
 
 .container {
@@ -130,6 +132,6 @@ button {
 }
 
 .login-form {
-  display:inline;
+  display: inline;
   width: 100px;
 }

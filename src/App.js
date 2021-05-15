@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Login from "./components/Login";
+import { PrivateRoute } from "./helpers/PrivateRoute";
+import ColorList from "./components/ColorList";
 import "./styles.scss";
 
 function App() {
@@ -10,8 +12,11 @@ function App() {
       <div className="App">
         <header>
           Color Picker Sprint Challenge
-          <a data-testid="logoutButton" href="#">logout</a>
-        </header> 
+          <a data-testid="logoutButton" href="#">
+            logout
+          </a>
+        </header>
+        <PrivateRoute path="/colors" component={ColorList} />
 
         <Route exact path="/" component={Login} />
       </div>
