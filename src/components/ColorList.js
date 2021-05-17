@@ -36,7 +36,14 @@ const ColorList = ({ colors, updateColors }) => {
       .catch((err) => console.log(err));
   };
 
-  const deleteColor = (color) => {};
+  const deleteColor = (color) => {
+    axiosWithAuth()
+      .delete(`/colors/${color.id}`)
+      .then((res) => {
+        updateColors(colors.filter((color) => color.id != res.data));
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
     <div className="colors-wrap">
